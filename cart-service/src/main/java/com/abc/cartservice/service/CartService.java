@@ -22,4 +22,8 @@ public class CartService {
     public List<Cart> getAllItems() {
         return cartRepository.findAll();
     }
+
+    public void emptyCart() {
+        cartRepository.deleteAll();
+    }
 }

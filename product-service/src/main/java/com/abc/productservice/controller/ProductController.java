@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/product")
 @Slf4j
 public class ProductController {
 
@@ -31,7 +31,7 @@ public class ProductController {
 
     }
 
-    @PostMapping("/add")
+    @PostMapping("/")
     public void addProduct(@RequestBody Product product){
         log.info("POST: saveProduct post request");
         productService.addProduct(product);

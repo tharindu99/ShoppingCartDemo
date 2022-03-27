@@ -23,10 +23,16 @@ public class CartController {
         return cartService.getAllItems();
     }
 
-    @PostMapping("/add/")
+    @PostMapping("/")
     public void addItemToCart(@RequestBody Cart productSelection){
         log.info("POST: add item to cart");
         cartService.addItemToCart(productSelection);
+    }
+
+    @DeleteMapping("/")
+    public void emptyCart(){
+        log.info("DELETE: empty cart");
+        cartService.emptyCart();
     }
 
 
